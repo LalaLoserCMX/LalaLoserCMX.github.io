@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #ea2f45;
+    background-color: #000000;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#Banner {
+    width: 50%;
+    height: auto;
+    margin: 0px 25%;
+}
+
+#Links {
+    width: 50%;
+    height: auto;
+    margin: 0px 25%;
+    text-align: center;
+}
+
+#Social {
+    margin: auto;
+    width: 100%;
+}
+
+    #Social ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+.social_option {
+    /* Optional: Ensure the individual items are treated as flex items */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds space between the SVG and the text inside the item */
+}
+
+.social_option svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    /* Use fill for solid icons */
+    fill: #d31a42;
+    stroke: none;
+}
+
+/* If you want them to change color on hover */
+.social_option:hover svg {
+    fill: #ff0033;
+}
+
+.social_option svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #d31a42;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    cursor: pointer;
+}
+
+.social_option span {
+    font-size: 16px;
+    color: var(--Dark-Bright);
+    line-height: 1;
+    cursor: pointer;
+}
+
+#Panel {
+    width: 50%;
+    height: auto;
+    margin: 0px 25%;
+    text-align: center;
+}

@@ -1,0 +1,43 @@
+.navigation {
+    font-size: 10px;
+    vertical-align: text-top;
+    display: inline-block;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px auto;
+}
+    .navigation .nav_cell {
+        vertical-align: text-top;
+    }
+    .navigation .nav {
+        width: 44px;
+        padding-top: 44px;
+        margin: 0 0px;
+        font-size: 0.9em;
+        color: #dd0000;
+        display: inline-block;
+        vertical-align: text-top;
+    }
+        .navigation div.nav:hover {
+            background-position: -44px 0;
+        }
+        .navigation .nav.first {
+            background: url('../Assets/Images/first.png') no-repeat;
+        }
+        .navigation .nav.prev {
+            background: url('../Assets/Images/prev.png') no-repeat;
+        }
+        .navigation .nav.prevchap {
+            background: url('../Assets/Images/prevchap.png') no-repeat;
+        }
+        .navigation .nav.nextchap {
+            background: url('../Assets/Images/nextchap.png') no-repeat;
+        }
+        .navigation .nav.next {
+            background: url('../Assets/Images/next.png') no-repeat;
+        }
+        .navigation .nav.last {
+            background: url('../Assets/Images/last.png') no-repeat;
+        }
+
+
