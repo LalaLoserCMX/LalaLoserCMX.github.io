@@ -5,17 +5,12 @@ var path = window.location.pathname;
 if (path.endsWith('/')) path = path.substring(0, path.length - 1);
 
 var chapter = path.substring(0, path.length - (path.split('/').pop().length + 1)).split('/').pop();
-var chapterNumber = 0;
+var chapterNumber = chapterNumber = parseInt((chapter.substring(chapter.length - 1, chapter.length)), 10);
 
 var page = path.split('/').pop().split('.')[0];
-var pageNumber = 0;
+var pageNumber = parseInt((page.substring(page.length - 1, page.length)), 10);
 
 var isLastPage = getComputedStyle(document.documentElement).getPropertyValue('--isLastPage');
-
-if (page != "LalaLoserCMX") {
-    chapterNumber = parseInt((chapter.substring(chapter.length - 1, chapter.length)), 10);
-    pageNumber = parseInt((page.substring(page.length - 1, page.length)), 10);
-}
 
 propose("--Current_Chapter_Number", chapterNumber);
 propose("--Current_Page_Number", pageNumber);
@@ -68,4 +63,4 @@ function linkNext() {
 }
 function linkLast() { window.location.href="https://LalaLoserCMX.github.io/Chapter_" + latestChapter + "/Page_" + latestPage; }
 
-if (chapterNumber != 0) document.getElementById("Panel").setAttribute("src", "../../Assets/Images/Chapter_" + chapterNumber + "/Page_" + pageNumber + ".png");
+if (chapterNumber != NaN) document.getElementById("Panel").setAttribute("src", "../../Assets/Images/Chapter_" + chapterNumber + "/Page_" + pageNumber + ".png");
