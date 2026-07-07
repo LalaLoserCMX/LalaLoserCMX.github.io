@@ -12,7 +12,7 @@ var pageNumber = 0;
 
 var isLastPage = getComputedStyle(document.documentElement).getPropertyValue('--isLastPage');
 
-if (path != "/") {
+if (path != "") {
     chapterNumber = parseInt((chapter.substring(chapter.length - 1, chapter.length)), 10);
     pageNumber = parseInt((page.substring(page.length - 1, page.length)), 10);
 }
@@ -20,7 +20,7 @@ if (path != "/") {
 propose("--Current_Chapter_Number", chapterNumber);
 propose("--Current_Page_Number", pageNumber);
 propose("--Current_Chapter", chapter);
-propose("--Current_Page", pageNumber);
+propose("--Current_Page", page);
 
 
 
