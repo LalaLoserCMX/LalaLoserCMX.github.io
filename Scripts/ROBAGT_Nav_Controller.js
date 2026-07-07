@@ -47,26 +47,26 @@ else {
 
 function linkFirst() { window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1'; }
 function linkPrevious() {
-    if (isHomePage !== 1) {
+    if (!isHomePage) {
         if (pageNumber !== 1) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + chapterNumber + "/Page_" + (pageNumber - 1); }
         else { window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1'; }
     } else window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1';
 }
 function linkPreviousChapter() {
-    if (isHomePage !== 1) {
+    if (!isHomePage) {
         if (chapterNumber !== 1) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + (chapterNumber - 1) + "/Page_1"; }
         else { window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1'; }
     } else window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1';
 }
 
 function linkNextChapter() {
-    if (isHomePage !== 1) {
+    if (!isHomePage) {
         if (chapterNumber !== latestChapter) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + (chapterNumber + 1) + "/Page_1"; }
         else { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + latestChapter + "/Page_" + latestPage; }
     } else window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1';
 }
 function linkNext() {
-    if (isHomePage !== 1) {
+    if (!isHomePage) {
         if (chapterNumber !== latestChapter || pageNumber !== latestPage) {
             if (isLastPage !== "YES") {  window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + chapterNumber + "/Page_" + (pageNumber + 1); }
             else { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + (chapterNumber + 1) + "/Page_1"; }
