@@ -10,15 +10,15 @@ body {
 }
 
 #Banner {
-    width: 50%;
+    width: 100%;
     height: auto;
-    margin: 0px 25%;
+    margin: 0px;
 }
 
 #Links {
-    width: 50%;
+    width: 100%;
     height: auto;
-    margin: 0px 25%;
+    margin: 0px;
     text-align: center;
 }
 
@@ -72,15 +72,44 @@ body {
 }
 
 .social_option span {
-    font-size: 16px;
+    font-size: 8px;
     color: var(--Dark-Bright);
     line-height: 1;
     cursor: pointer;
 }
 
 #Panel {
-    width: 50%;
+    width: 100%;
     height: auto;
-    margin: 0px 25%;
+    margin: 0px;
     text-align: center;
+}
+
+/* Tablets and small laptops (min-width: 768px) */
+@media screen and (min-width: 768px) {
+    #Banner {
+        width: 50%;
+        margin: 0px 25%;
+    }
+    
+    #Links {
+        width: 50%;
+        margin: 0px 25%;
+    }
+
+    .social_option span {
+        font-size: 16px;
+    }
+    
+    #Panel {
+        width: 50%;
+        margin: 0px 25%;
+    }
+}
+
+/* Desktops and large screens (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
 }
