@@ -39,7 +39,7 @@ document.write(navBarHTML);
 if (!Number.isNaN(chapterNumber)) document.getElementById("Panel").setAttribute("src", "../../Assets/Images/Chapter_" + chapterNumber + "/Page_" + pageNumber + ".png");
 
 else {
-    document.getElementById("Panel").setAttribute("src", "../../Assets/Images/CH_1.png");
+    document.getElementById("Panel").setAttribute("src", "../../Assets/Images/HomePage.png");
     chapterNumber = 1;
     pageNumber = 1;
     isHomePage = 1;
