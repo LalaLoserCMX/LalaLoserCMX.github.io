@@ -12,7 +12,7 @@ var pageNumber = 0;
 
 var isLastPage = getComputedStyle(document.documentElement).getPropertyValue('--isLastPage');
 
-if (path != "") {
+if (path !== "" && path !== "/") {
     chapterNumber = parseInt((chapter.substring(chapter.length - 1, chapter.length)), 10);
     pageNumber = parseInt((page.substring(page.length - 1, page.length)), 10);
 }
@@ -48,25 +48,25 @@ document.write(navBarHTML);
 
 function linkFirst() { window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1'; }
 function linkPrevious() {
-    if (pageNumber != 1) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + chapterNumber + "/Page_" + (pageNumber - 1); }
+    if (pageNumber !== 1) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + chapterNumber + "/Page_" + (pageNumber - 1); }
     else { window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1'; }
 }
 function linkPreviousChapter() {
-    if (chapterNumber != 1) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + (chapterNumber - 1) + "/Page_1"; }
+    if (chapterNumber !== 1) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + (chapterNumber - 1) + "/Page_1"; }
     else { window.location.href='https://LalaLoserCMX.github.io/Pages/Chapter_1/Page_1'; }
 }
 
 function linkNextChapter() {
-    if (chapterNumber != latestChapter) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + (chapterNumber + 1) + "/Page_1"; }
+    if (chapterNumber !== latestChapter) { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + (chapterNumber + 1) + "/Page_1"; }
     else { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + latestChapter + "/Page_" + latestPage; }
 }
 function linkNext() {
-    if (chapterNumber != latestChapter || pageNumber != latestPage) {
-        if (isLastPage != "YES") {  window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + chapterNumber + "/Page_" + (pageNumber + 1); }
+    if (chapterNumber !== latestChapter || pageNumber != latestPage) {
+        if (isLastPage !== "YES") {  window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + chapterNumber + "/Page_" + (pageNumber + 1); }
         else { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + (chapterNumber + 1) + "/Page_1"; }
     }
     else { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + latestChapter + "/Page_" + latestPage; }
 }
 function linkLast() { window.location.href="https://LalaLoserCMX.github.io/Pages/Chapter_" + latestChapter + "/Page_" + latestPage; }
 
-if (chapterNumber != 0) document.getElementById("Panel").setAttribute("src", "../../Assets/Images/Chapter_" + chapterNumber + "/Page_" + pageNumber + ".png");
+if (chapterNumber !== 0) document.getElementById("Panel").setAttribute("src", "../../Assets/Images/Chapter_" + chapterNumber + "/Page_" + pageNumber + ".png");
