@@ -17,8 +17,10 @@ if (page != "LalaLoserCMX") {
     pageNumber = parseInt((page.substring(page.length - 1, page.length)), 10);
 }
 
-propose("--Current_Chapter", chapterNumber);
-propose("--Current_Page", pageNumber);
+propose("--Current_Chapter_Number", chapterNumber);
+propose("--Current_Page_Number", pageNumber);
+propose("--Current_Chapter", chapter);
+propose("--Current_Page", page);
 
 
 var navBarHTML = '\
