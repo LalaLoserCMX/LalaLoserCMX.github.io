@@ -12,7 +12,7 @@ var pageNumber = 0;
 
 var isLastPage = getComputedStyle(document.documentElement).getPropertyValue('--isLastPage');
 
-if (page != "lalalosercmx") {
+if (path != "/") {
     chapterNumber = parseInt((chapter.substring(chapter.length - 1, chapter.length)), 10);
     pageNumber = parseInt((page.substring(page.length - 1, page.length)), 10);
 }
